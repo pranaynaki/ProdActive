@@ -51,7 +51,7 @@ class ActivityManager():
 
     def getDedDupLog(self):
         # return [a.to_dict() for a in self.dedupLog]
-        return [{"name": name, "duration": self.durations[name]} for name in self.durations.keys()]
+        return [{"name": name, "duration": self.durations[name].seconds} for name in self.durations.keys()]
         # for ind, name, duration in enumerate(self.durations):
 
 
