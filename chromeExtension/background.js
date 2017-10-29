@@ -1,3 +1,5 @@
+var lastDomain = "";
+
 chrome.browserAction.onClicked.addListener(function(tab)
 {
     var newURL = "http://www.youtube.com/watch?v=oHg5SJYRHA0";
@@ -44,21 +46,40 @@ function extractRootDomain(url) {
 }
 
 function postHelper(domain) {
+  // don't send post req if same domain was switched to
+  if(domain === lastDomain) return;
+  lastDomain = domain;
+  //alert(domain);
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", 'http://40.74.232.157', true);
+  xhr.open("POST", 'http://40.74.232.157/website-change', true);
   
   //Send the proper header information along with the request
-  xhr.setRequestHeader("Content-type", "application/json");
-  
-  xhr.onreadystatechange = function() {//Call a function when the state changes.
-      if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-          // Request finished. Do processing here.
+  xhr.setRequestHeader("Content-Type", "application/json");
 
-      }
+  // xhr.addEventListener("load", function () {
+  //   alert(xhr.status);
+  // });
+
+  xhr.onreadystatechange = function () {
+    console.log(xhr.readyState);
+    console.log(xhr.responseText);
   }
+
+  /* xhr.onreadystatechange = function() {//Call a function when the state changes.
+    console.log(xhr.status);
+    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+          // Request finished. Do processing here.
+          alert(xhr.responseText);
+          // alert(lastDomain);
+
+      } else if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 0) {
+        alert(xhr.responseText + " wrong status " + xhr.status);
+      }
+      //alert("hi there");
+  } */
   
-  let returnString = xhr.send({"domain" : domain}); 
-  //alert(returnString);
+  xhr.send(JSON.stringify({"domain" : domain})); 
+  
   // xhr.send('string'); 
 }
 
