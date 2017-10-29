@@ -1,0 +1,190 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Activity	../activity.py	/^class Activity():$/;"	kind:class	line:4
+Activity	../app.py	/^from activity import Activity, ActivityManager$/;"	kind:namespace	line:6
+ActivityManager	../activity.py	/^class ActivityManager():$/;"	kind:class	line:15
+ActivityManager	../app.py	/^from activity import Activity, ActivityManager$/;"	kind:namespace	line:6
+CORS	../app.py	/^from flask_cors import CORS$/;"	kind:namespace	line:7
+ENABLE_USER_SITE	../venv/lib/python3.5/site.py	/^ENABLE_USER_SITE = None$/;"	kind:variable	line:81
+Flask	../app.py	/^from flask import Flask, jsonify, render_template, request$/;"	kind:namespace	line:1
+MAXLINES	../venv/lib/python3.5/site.py	/^    MAXLINES = 23$/;"	kind:variable	line:412
+Mode	../app.py	/^from mode import Mode$/;"	kind:namespace	line:4
+Mode	../mode.py	/^class Mode:$/;"	kind:class	line:1
+ModuleType	../venv/lib/python3.5/site.py	/^    ModuleType = type(os)$/;"	kind:variable	line:90
+PREFIXES	../venv/lib/python3.5/site.py	/^PREFIXES = [sys.prefix, sys.exec_prefix]$/;"	kind:variable	line:78
+Quitter	../venv/lib/python3.5/site.py	/^    class Quitter(object):$/;"	kind:class	line:391
+Task	../app.py	/^from task import Task, TaskBlock, TaskManager$/;"	kind:namespace	line:5
+Task	../task.py	/^class Task:$/;"	kind:class	line:38
+TaskBlock	../app.py	/^from task import Task, TaskBlock, TaskManager$/;"	kind:namespace	line:5
+TaskBlock	../task.py	/^class TaskBlock:$/;"	kind:class	line:29
+TaskManager	../app.py	/^from task import Task, TaskBlock, TaskManager$/;"	kind:namespace	line:5
+TaskManager	../task.py	/^class TaskManager:$/;"	kind:class	line:4
+USER_BASE	../venv/lib/python3.5/site.py	/^USER_BASE = None$/;"	kind:variable	line:84
+USER_SITE	../venv/lib/python3.5/site.py	/^USER_SITE = None$/;"	kind:variable	line:83
+_Helper	../venv/lib/python3.5/site.py	/^class _Helper(object):$/;"	kind:class	line:494
+_Printer	../venv/lib/python3.5/site.py	/^class _Printer(object):$/;"	kind:class	line:408
+__call__	../venv/lib/python3.5/site.py	/^        def __call__(self, code=None):$/;"	kind:member	line:396
+__call__	../venv/lib/python3.5/site.py	/^    def __call__(self):$/;"	kind:member	line:449
+__call__	../venv/lib/python3.5/site.py	/^    def __call__(self, *args, **kwds):$/;"	kind:member	line:503
+__init__	../activity.py	/^    def __init__(self):$/;"	kind:member	line:17
+__init__	../activity.py	/^    def __init__(self, name, duration = None ):$/;"	kind:member	line:5
+__init__	../mode.py	/^    def __init__(self):$/;"	kind:member	line:2
+__init__	../task.py	/^    def __init__(self):$/;"	kind:member	line:5
+__init__	../task.py	/^    def __init__(self, name, duration, start, next_break, break_duration, break_gap):$/;"	kind:member	line:39
+__init__	../task.py	/^    def __init__(self, start, end, is_break=False):$/;"	kind:member	line:30
+__init__	../venv/lib/python3.5/site.py	/^        def __init__(self, name):$/;"	kind:member	line:392
+__init__	../venv/lib/python3.5/site.py	/^    def __init__(self, name, data, files=(), dirs=()):$/;"	kind:member	line:414
+__init__.py	../venv/lib/python3.5/distutils/__init__.py	1;"	kind:file	line:1
+__repr__	../venv/lib/python3.5/site.py	/^        def __repr__(self):$/;"	kind:member	line:394
+__repr__	../venv/lib/python3.5/site.py	/^    def __repr__(self):$/;"	kind:member	line:442
+__repr__	../venv/lib/python3.5/site.py	/^    def __repr__(self):$/;"	kind:member	line:500
+__revision__	../venv/lib/python3.5/distutils/__init__.py	/^        __revision__ = real_distutils.__revision__$/;"	kind:variable	line:20
+__setup	../venv/lib/python3.5/site.py	/^    def __setup(self):$/;"	kind:member	line:421
+__version__	../venv/lib/python3.5/distutils/__init__.py	/^    __version__ = real_distutils.__version__$/;"	kind:variable	line:23
+_init_pathinfo	../venv/lib/python3.5/site.py	/^def _init_pathinfo():$/;"	kind:function	line:143
+_is_64bit	../venv/lib/python3.5/site.py	/^_is_64bit = (getattr(sys, 'maxsize', None) or getattr(sys, 'maxint')) > 2**32$/;"	kind:variable	line:86
+_is_pypy	../venv/lib/python3.5/site.py	/^_is_pypy = hasattr(sys, 'pypy_version_info')$/;"	kind:variable	line:87
+_script	../venv/lib/python3.5/site.py	/^def _script():$/;"	kind:function	line:705
+a	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+abs__file__	../venv/lib/python3.5/site.py	/^def abs__file__():$/;"	kind:function	line:100
+activate_this.py	../venv/bin/activate_this.py	1;"	kind:file	line:1
+activity.py	../activity.py	1;"	kind:file	line:1
+activity_manager	../app.py	/^activity_manager = ActivityManager()$/;"	kind:variable	line:11
+add	../activity.py	/^    def add(self, name, duration = None):$/;"	kind:member	line:25
+add_block	../task.py	/^    def add_block(self, start, end):$/;"	kind:member	line:63
+add_task	../app.py	/^def add_task():$/;"	kind:function	line:26
+add_task	../task.py	/^    def add_task(self, name, duration, deadline=None):$/;"	kind:member	line:11
+add_website	../app.py	/^def add_website():$/;"	kind:function	line:41
+addbuilddir	../venv/lib/python3.5/site.py	/^def addbuilddir():$/;"	kind:function	line:133
+addpackage	../venv/lib/python3.5/site.py	/^def addpackage(sitedir, name, known_paths):$/;"	kind:function	line:155
+addsitedir	../venv/lib/python3.5/site.py	/^def addsitedir(sitedir, known_paths=None):$/;"	kind:function	line:186
+addsitepackages	../venv/lib/python3.5/site.py	/^def addsitepackages(known_paths, sys_prefix=sys.prefix, exec_prefix=sys.exec_prefix):$/;"	kind:function	line:209
+addusersitepackages	../venv/lib/python3.5/site.py	/^def addusersitepackages(known_paths):$/;"	kind:function	line:309
+aliasmbcs	../venv/lib/python3.5/site.py	/^def aliasmbcs():$/;"	kind:function	line:510
+app	../app.py	/^app = Flask(__name__)$/;"	kind:variable	line:9
+app.py	../app.py	1;"	kind:file	line:1
+base	../venv/bin/activate_this.py	/^base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:18
+basestring	../venv/lib/python3.5/distutils/__init__.py	/^    basestring = str$/;"	kind:variable	line:30
+build_ext	../venv/lib/python3.5/distutils/__init__.py	/^    class build_ext(old_build_ext):$/;"	kind:class	line:37
+build_ext_module	../venv/lib/python3.5/distutils/__init__.py	/^    from distutils.command import build_ext as build_ext_module $/;"	kind:namespace	line:47
+builtins	../venv/lib/python3.5/site.py	/^    import __builtin__ as builtins$/;"	kind:namespace	line:69
+builtins	../venv/lib/python3.5/site.py	/^    import builtins$/;"	kind:namespace	line:71
+button_descriptions	../descriptions.py	/^button_descriptions = {"button1" : casual_description, "button2" : productive_description, "button3" : crunch_description}$/;"	kind:variable	line:4
+can	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+casual_description	../descriptions.py	/^casual_description = "<b>Casual<\/b><br\/><p>Are you browsing on the web casually and working without any immediate deadlines? In Casual Mode, you will be alerted if you spend a long time on a page and you will get designated 15 minute breaks every 60 minutes. This mode is meant to keep you productive without many restraints on your browsing activity.<\/p>"$/;"	kind:variable	line:1
+check_enableusersite	../venv/lib/python3.5/site.py	/^def check_enableusersite():$/;"	kind:function	line:285
+codecs	../venv/lib/python3.5/site.py	/^        import locale, codecs$/;"	kind:namespace	line:515
+crunch_description	../descriptions.py	/^crunch_description = "<b>Time Crunch<\/b><br\/><p>If you are in a time crunch to get something done, pick this mode. You get 1 minute breaks every 60 minutes and social media sites are completely blocked. You will continue to receive warnings if you spend a long time on a single page.<\/p>"$/;"	kind:variable	line:3
+datetime	../activity.py	/^from datetime import datetime, timedelta$/;"	kind:namespace	line:1
+datetime	../task.py	/^from datetime import datetime, timedelta$/;"	kind:namespace	line:1
+descriptions	../app.py	/^import descriptions$/;"	kind:namespace	line:2
+descriptions.py	../descriptions.py	1;"	kind:file	line:1
+dirname	../venv/lib/python3.5/distutils/__init__.py	/^dirname = os.path.dirname$/;"	kind:variable	line:9
+dist	../venv/lib/python3.5/distutils/__init__.py	/^from distutils import dist, sysconfig$/;"	kind:namespace	line:25
+distutils_path	../venv/lib/python3.5/distutils/__init__.py	/^distutils_path = os.path.join(os.path.dirname(opcode.__file__), 'distutils')$/;"	kind:variable	line:11
+encodings	../venv/lib/python3.5/site.py	/^                import encodings$/;"	kind:namespace	line:521
+execsitecustomize	../venv/lib/python3.5/site.py	/^def execsitecustomize():$/;"	kind:function	line:545
+execusercustomize	../venv/lib/python3.5/site.py	/^def execusercustomize():$/;"	kind:function	line:660
+exists	../venv/lib/python3.5/site.py	/^        def exists(path):$/;"	kind:function	line:726
+exit_with_usage	../venv/bin/python-config	/^def exit_with_usage(code=1):$/;"	kind:function	line:17
+finalize_options	../venv/lib/python3.5/distutils/__init__.py	/^        def finalize_options (self):$/;"	kind:member	line:38
+find	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+find_config_files	../venv/lib/python3.5/distutils/__init__.py	/^def find_config_files(self):$/;"	kind:function	line:53
+fixclasspath	../venv/lib/python3.5/site.py	/^def fixclasspath():$/;"	kind:function	line:646
+force_global_eggs_after_local_site_packages	../venv/lib/python3.5/site.py	/^def force_global_eggs_after_local_site_packages():$/;"	kind:function	line:627
+getDedDupLog	../activity.py	/^    def getDedDupLog(self):$/;"	kind:member	line:52
+getRawLog	../activity.py	/^    def getRawLog(self):$/;"	kind:member	line:49
+get_log	../app.py	/^def get_log(kind):$/;"	kind:function	line:47
+get_platform	../venv/lib/python3.5/site.py	/^    from distutils.util import get_platform$/;"	kind:namespace	line:136
+get_schedule	../task.py	/^    def get_schedule(self):$/;"	kind:member	line:26
+get_selected	../mode.py	/^    def get_selected(self):$/;"	kind:member	line:7
+getopt	../venv/bin/python-config	/^import getopt$/;"	kind:namespace	line:4
+getvar	../venv/bin/python-config	/^getvar = sysconfig.get_config_var$/;"	kind:variable	line:31
+hello_world	../app.py	/^def hello_world():$/;"	kind:function	line:21
+imp	../venv/lib/python3.5/distutils/__init__.py	/^import imp$/;"	kind:namespace	line:4
+init_manager	../app.py	/^def init_manager():$/;"	kind:function	line:31
+is	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+it	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+joinuser	../venv/lib/python3.5/site.py	/^    def joinuser(*args):$/;"	kind:function	line:324
+json	../activity.py	/^import json$/;"	kind:namespace	line:2
+json	../app.py	/^import json$/;"	kind:namespace	line:3
+json	../task.py	/^import json$/;"	kind:namespace	line:2
+jsonify	../app.py	/^from flask import Flask, jsonify, render_template, request$/;"	kind:namespace	line:1
+length	../activity.py	/^    def length(self):$/;"	kind:member	line:9
+locale	../venv/lib/python3.5/site.py	/^        import locale$/;"	kind:namespace	line:532
+locale	../venv/lib/python3.5/site.py	/^        import locale, codecs$/;"	kind:namespace	line:515
+main	../venv/lib/python3.5/site.py	/^def main():$/;"	kind:function	line:668
+makepath	../venv/lib/python3.5/site.py	/^def makepath(*paths):$/;"	kind:function	line:92
+mode	../app.py	/^mode = Mode()$/;"	kind:variable	line:12
+mode.py	../mode.py	1;"	kind:file	line:1
+modeselect	../app.py	/^def modeselect():$/;"	kind:function	line:16
+module	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+new_sys_path	../venv/bin/activate_this.py	/^new_sys_path = []$/;"	kind:variable	line:29
+next_available_time	../task.py	/^    def next_available_time(self, current_time):$/;"	kind:member	line:20
+not	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+old_build_ext	../venv/lib/python3.5/distutils/__init__.py	/^    from distutils.command.build_ext import build_ext as old_build_ext$/;"	kind:namespace	line:36
+old_find_config_files	../venv/lib/python3.5/distutils/__init__.py	/^old_find_config_files = dist.Distribution.find_config_files$/;"	kind:variable	line:52
+old_get_config_vars	../venv/lib/python3.5/distutils/__init__.py	/^old_get_config_vars = sysconfig.get_config_vars$/;"	kind:variable	line:90
+old_get_python_inc	../venv/lib/python3.5/distutils/__init__.py	/^old_get_python_inc = sysconfig.get_python_inc$/;"	kind:variable	line:74
+old_get_python_lib	../venv/lib/python3.5/distutils/__init__.py	/^old_get_python_lib = sysconfig.get_python_lib$/;"	kind:variable	line:82
+old_os_path	../venv/bin/activate_this.py	/^old_os_path = os.environ.get('PATH', '')$/;"	kind:variable	line:16
+opcode	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+opt_flags	../venv/bin/python-config	/^opt_flags = [flag for (flag, val) in opts]$/;"	kind:variable	line:33
+os	../venv/bin/activate_this.py	/^import os$/;"	kind:namespace	line:14
+os	../venv/lib/python3.5/distutils/__init__.py	/^import os$/;"	kind:namespace	line:1
+os	../venv/lib/python3.5/site.py	/^import os$/;"	kind:namespace	line:67
+prev_sys_path	../venv/bin/activate_this.py	/^prev_sys_path = list(sys.path)$/;"	kind:variable	line:23
+productive_description	../descriptions.py	/^productive_description = "<b>Productive<\/b><br\/><p>This mode is meant for those trying to get work done without distractions. In Productive Mode, in addition to warnings when you spend too long on a single page, you will also be warned when you are visiting social media websites. You will get designated 5 minute breaks every 60 minutes.<\/p>"$/;"	kind:variable	line:2
+pydoc	../venv/lib/python3.5/site.py	/^        import pydoc$/;"	kind:namespace	line:504
+python-config	../venv/bin/python-config	1;"	kind:file	line:1
+pyver	../venv/bin/python-config	/^pyver = sysconfig.get_config_var('VERSION')$/;"	kind:variable	line:30
+real_distutils	../venv/lib/python3.5/distutils/__init__.py	/^    real_distutils = imp.load_module("_virtualenv_distutils", None, distutils_path, ('', '', imp.PKG_DIRECTORY))$/;"	kind:variable	line:17
+removeduppaths	../venv/lib/python3.5/site.py	/^def removeduppaths():$/;"	kind:function	line:113
+render_template	../app.py	/^from flask import Flask, jsonify, render_template, request$/;"	kind:namespace	line:1
+request	../app.py	/^from flask import Flask, jsonify, render_template, request$/;"	kind:namespace	line:1
+schedule	../app.py	/^def schedule():$/;"	kind:function	line:37
+select_mode	../mode.py	/^    def select_mode(self, button):$/;"	kind:member	line:10
+set	../venv/lib/python3.5/site.py	/^    from sets import Set as set$/;"	kind:namespace	line:75
+setBEGINLIBPATH	../venv/lib/python3.5/site.py	/^def setBEGINLIBPATH():$/;"	kind:function	line:362
+setcopyright	../venv/lib/python3.5/site.py	/^def setcopyright():$/;"	kind:function	line:472
+setencoding	../venv/lib/python3.5/site.py	/^def setencoding():$/;"	kind:function	line:525
+sethelper	../venv/lib/python3.5/site.py	/^def sethelper():$/;"	kind:function	line:507
+setquit	../venv/lib/python3.5/site.py	/^def setquit():$/;"	kind:function	line:379
+site	../venv/bin/activate_this.py	/^import site$/;"	kind:namespace	line:24
+site.py	../venv/lib/python3.5/site.py	1;"	kind:file	line:1
+site_packages	../venv/bin/activate_this.py	/^    site_packages = os.path.join(base, 'Lib', 'site-packages')$/;"	kind:variable	line:20
+site_packages	../venv/bin/activate_this.py	/^    site_packages = os.path.join(base, 'lib', 'python%s' % sys.version[:3], 'site-packages')$/;"	kind:variable	line:22
+sitecustomize	../venv/lib/python3.5/site.py	/^        import sitecustomize$/;"	kind:namespace	line:548
+so	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+stdlib	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+sys	../venv/bin/activate_this.py	/^import sys$/;"	kind:namespace	line:13
+sys	../venv/bin/python-config	/^import sys$/;"	kind:namespace	line:3
+sys	../venv/lib/python3.5/distutils/__init__.py	/^import sys$/;"	kind:namespace	line:2
+sys	../venv/lib/python3.5/site.py	/^import sys$/;"	kind:namespace	line:66
+sysconfig	../venv/bin/python-config	/^import sysconfig$/;"	kind:namespace	line:5
+sysconfig	../venv/lib/python3.5/distutils/__init__.py	/^from distutils import dist, sysconfig$/;"	kind:namespace	line:25
+sysconfig_get_config_vars	../venv/lib/python3.5/distutils/__init__.py	/^def sysconfig_get_config_vars(*args):$/;"	kind:function	line:91
+sysconfig_get_python_inc	../venv/lib/python3.5/distutils/__init__.py	/^def sysconfig_get_python_inc(plat_specific=0, prefix=None):$/;"	kind:function	line:75
+sysconfig_get_python_lib	../venv/lib/python3.5/distutils/__init__.py	/^def sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):$/;"	kind:function	line:83
+task.py	../task.py	1;"	kind:file	line:1
+task_manager	../app.py	/^task_manager = TaskManager()$/;"	kind:variable	line:10
+textwrap	../venv/lib/python3.5/site.py	/^        import textwrap$/;"	kind:namespace	line:753
+the	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+timedelta	../activity.py	/^from datetime import datetime, timedelta$/;"	kind:namespace	line:1
+timedelta	../task.py	/^from datetime import datetime, timedelta$/;"	kind:namespace	line:1
+to	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+to_dict	../activity.py	/^    def to_dict(self):$/;"	kind:member	line:12
+to_dict	../task.py	/^    def to_dict(self):$/;"	kind:member	line:35
+to_dict	../task.py	/^    def to_dict(self):$/;"	kind:member	line:66
+use	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+usercustomize	../venv/lib/python3.5/site.py	/^        import usercustomize$/;"	kind:namespace	line:663
+valid_opts	../venv/bin/python-config	/^valid_opts = ['prefix', 'exec-prefix', 'includes', 'libs', 'cflags',$/;"	kind:variable	line:7
+virtual_addsitepackages	../venv/lib/python3.5/site.py	/^def virtual_addsitepackages(known_paths):$/;"	kind:function	line:642
+virtual_install_main_packages	../venv/lib/python3.5/site.py	/^def virtual_install_main_packages():$/;"	kind:function	line:552
+virtualenv	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
+warnings	../venv/lib/python3.5/distutils/__init__.py	/^import warnings $/;"	kind:namespace	line:3
+we	../venv/lib/python3.5/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5

@@ -15,7 +15,7 @@ class Activity():
 class ActivityManager():
 
     def __init__(self):
-        # self.rawLog = []
+        self.rawLog = []
         # self.dedupLog = []
         self.last_domain = None
         self.last_time = None
@@ -39,7 +39,7 @@ class ActivityManager():
             if name not in self.durations:
                 self.durations[name] = 0
             current_time = datetime.now()
-            self.durations[self.last_domain] += current_time - last_time
+            self.durations[self.last_domain] += current_time - self.last_time
             self.last_domain = name
             self.last_time = current_time
 
