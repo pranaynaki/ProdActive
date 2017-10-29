@@ -34,10 +34,10 @@ class ActivityManager():
         if self.last_domain is None:
             self.last_domain = name
             self.last_time = datetime.now()
-            self.durations[name] = datetime.timedelta() #defaults to 0
+            self.durations[name] = timedelta() #defaults to 0
         else:
             if name not in self.durations:
-                self.durations[name] = datetime.timedelta() #defaults to 0
+                self.durations[name] = timedelta() #defaults to 0
             current_time = datetime.now()
             self.durations[self.last_domain] += current_time - self.last_time
             self.last_domain = name
