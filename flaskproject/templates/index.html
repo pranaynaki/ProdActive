@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Generic Productivity Tool</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="menu-bar" style="color: #fff; font-size: 30px;">
+            Generic Productivity Tool
+    </div>
+    <div class="container">
+        <table style="width:100%;">
+            <tr>
+                <td align="center">
+                    <div class"buttons-container" style="width: 200px;">
+                        <a class="button1" id="button1" data-animation="ripple">Casual</a><br/><br/>
+                        <a class="button2" id="button2" data-animation="ripple">Productive</a><br/><br/>
+                        <a class="button3" id="button3" data-animation="ripple">Time Crunch</a><br/><br/>
+                    </div>
+                </td>
+                <td align="center">
+                    <div class="text-container" id="text-container" style="width: 300px;color: #fff;">
+                    {{description|safe}}    
+                    </div>    
+                </td> 
+            </tr>
+        </table>
+
+    </div>
+    <!--script src="{{ url_for('static', filename='js/scripts.js') }}"></script-->
+    <script>
+const isMobile = window.navigator.userAgent.match(/Mobile/) && window.navigator.userAgent.match(/Mobile/)[0] === "Mobile";
+const event = isMobile ? "touchstart" : "click";
+
+const button = document.querySelectorAll('*[data-animation="ripple"]'),
+            container = document.querySelector(".container");
+
+for (var i = 0; i < button.length; i++) {
+    const currentBtn = button[i];
+    
+    currentBtn.addEventListener(event, function(e) {
+        
+        e.preventDefault();
+        const button = e.target,
+                    rect = button.getBoundingClientRect(),
+                    originalBtn = this,
+                    btnHeight = rect.height,
+                    btnWidth = rect.width;
+        let posMouseX = 0,
+                posMouseY = 0;
+        
+        if (isMobile) {
+            posMouseX = e.changedTouches[0].pageX - rect.left;
+            posMouseY = e.changedTouches[0].pageY - rect.top;
+        } else {
+            posMouseX = e.x - rect.left;
+            posMouseY = e.y - rect.top;
+        }
+        
+        const baseCSS =  `position: absolute;
+                                            width: ${btnWidth * 2}px;
+                                            height: ${btnWidth * 2}px;
+                                            transition: all linear 700ms;
+                                            transition-timing-function:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+                                            border-radius: 50%;
+                                            background: var(--color-ripple);
+                                            top:${posMouseY - btnWidth}px;
+                                            left:${posMouseX - btnWidth}px;
+                                            pointer-events: none;
+                                            transform:scale(0)`
+        
+        var rippleEffect = document.createElement("span");
+        rippleEffect.style.cssText = baseCSS;
+        
+        //prepare the dom
+        currentBtn.style.overflow = "hidden";
+        this.appendChild(rippleEffect);
+        
+        //start animation
+        setTimeout( function() { 
+            rippleEffect.style.cssText = baseCSS + `transform:scale(1); opacity: 0;`;
+        }, 5);
+        
+        setTimeout( function() {
+            rippleEffect.remove();
+            //window.location.href = currentBtn.href;
+        },700);
+    })
+}
+
+var actualContent = "{{description|safe}}";
+document.getElementById('{{startingbutton}}').classList.add('active');
+
+$(document).ready(function () {
+    $(document).on('mouseenter', '.button1', function () {
+        document.getElementById("text-container").innerHTML = "{{ button1text |safe}}";
+    }).on('mouseleave', '.button1', function () {
+        document.getElementById("text-container").innerHTML = actualContent;
+    });
+    $(document).on('mouseenter', '.button2', function () {
+        document.getElementById("text-container").innerHTML = "{{ button2text |safe}}";
+    }).on('mouseleave', '.button2', function () {
+        document.getElementById("text-container").innerHTML = actualContent;
+    });
+    $(document).on('mouseenter', '.button3', function () {
+        document.getElementById("text-container").innerHTML = "{{ button3text |safe}}";
+    }).on('mouseleave', '.button3', function () {
+        document.getElementById("text-container").innerHTML = actualContent;
+    });
+    $(document).on('click', '.button1', function () {
+        actualContent = "{{ button1text |safe}}";
+        document.getElementById("text-container").innerHTML = actualContent;
+        document.getElementById('button1').classList.add('active');
+        document.getElementById('button2').classList.remove('active');
+        document.getElementById('button3').classList.remove('active');
+        $.ajax({
+            url: '/selectMode',
+            data: JSON.stringify({"mode" : "button1"}),
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+    $(document).on('click', '.button2', function () {
+        actualContent = "{{ button2text|safe }}";
+        document.getElementById("text-container").innerHTML = actualContent;
+        document.getElementById('button2').classList.add('active');
+        document.getElementById('button1').classList.remove('active');
+        document.getElementById('button3').classList.remove('active');
+        $.ajax({
+            url: '/selectMode',
+            data: JSON.stringify({"mode" : "button2"}),
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+    $(document).on('click', '.button3', function () {
+        actualContent = "{{ button3text |safe}}";
+        document.getElementById("text-container").innerHTML = actualContent;
+        document.getElementById('button3').classList.add('active');
+        document.getElementById('button1').classList.remove('active');
+        document.getElementById('button2').classList.remove('active');
+        $.ajax({
+            url: '/selectMode',
+            data: JSON.stringify({"mode" : "button3"}),
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>
