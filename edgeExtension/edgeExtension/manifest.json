@@ -1,0 +1,31 @@
+{
+    "author": "hacktx",
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Click new here!"
+    },
+    "description": "This extension allows the user to be more productive.",
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "manifest_version": 2,
+    "name": "Prodactive",
+    "permissions": [
+        "background",
+        "activeTab",
+        "storage",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "version": "1.0",
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
+    }
+}
