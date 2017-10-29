@@ -1,0 +1,18 @@
+{
+  "name": "productive",
+  "version": "1.0.0",
+  "description": "Cortana speech bot for the productivity chrome extension.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "productivity"
+  ],
+  "author": "Double-N",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.11.0",
+    "restify": "^6.2.3"
+  }
+}
