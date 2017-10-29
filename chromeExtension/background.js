@@ -1,13 +1,5 @@
 var lastDomain = "";
 
-chrome.browserAction.onClicked.addListener(function(tab)
-{
-    var newURL = "http://www.youtube.com/watch?v=oHg5SJYRHA0";
-    var currentTab = tab.url;
-    alert(Date.now());
-    chrome.tabs.create({ url: newURL });
-});
-
 function extractHostname(url) {
   var hostname;
   //find & remove protocol (http, ftp, etc.) and get hostname
@@ -84,18 +76,18 @@ function postHelper(domain) {
 }
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-  var url = tab.url;
-  if (url !== undefined && changeInfo.status == "complete") {
-    let domain = extractRootDomain(tab.url)
-    postHelper(domain);
-}
+    var url = tab.url;
+    if (url !== undefined && changeInfo.status == "complete") {
+        let domain = extractRootDomain(tab.url);
+        postHelper(domain);
+    }
 }); 
 
 chrome.tabs.onActivated.addListener(function(activeInfo) {
- // how to fetch tab url using activeInfo.tabid
- chrome.tabs.get(activeInfo.tabId, function(tab){
-    //alert(extractRootDomain(tab.url));
-    let domain = extractRootDomain(tab.url)
-    postHelper(domain);
- });
+    // how to fetch tab url using activeInfo.tabid
+    chrome.tabs.get(activeInfo.tabId, function(tab){
+        //alert(extractRootDomain(tab.url));
+        let domain = extractRootDomain(tab.url);
+        postHelper(domain);
+    });
 });
