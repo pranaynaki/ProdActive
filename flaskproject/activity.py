@@ -43,7 +43,17 @@ class ActivityManager():
             self.last_domain = name
             self.last_time = current_time
 
-        
+
+    def getD3Data(self):
+        dedup = self.getDedDupLog()
+        dedup = sorted(dedup, key=lambda k: k['duration'], reverse=True)
+        dedup = dedup[:5]
+        total = 0
+        for i in dedup:
+            total += i["duration"]
+        if total == 0:
+            return []
+        return [{"name" : d["name"], "percent" : round(d["duration"] * 100 / total, 1)} for d in dedup if d["duration"] > 0]        
         
 
     def getRawLog(self):

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>ProdActive</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <meta http-equiv="refresh" content="30"/>
+</head>
+<body>
+    <div class="menu-bar" style="color: #fff; font-size: 30px;">
+            <a href="/" style="color: #fff;text-decoration:none;">ProdActive</a>
+            <a href="/settings" style="color: #fff"><div style="float: right; font-size: 15px; margin-right: 40px; margin-top: 5px;">SETTINGS</div></a>
+            <a href="/visualization" style="color: #fff"><div style="float: right; font-size: 15px; margin-right: 40px; margin-top: 5px;">VISUALIZATION</div></a>
+    </div>
+    <div class="container">
+        <div class='btn-cont'>
+        <a class='btn' style="color: {{task_color}};">
+            {{ task_name }}
+            <span class='line-1'></span>
+            <span class='line-2'></span>
+            <span class='line-3'></span>
+            <span class='line-4'></span>
+        </a>
+        </div>
+        <h2 style="text-align: center; color: #fff;">Add Task</h2>
+        <form id="task-form" action="/add-task" method=POST>
+            <input type="text" id="taskname" name="name" placeholder="Task Name">
+            <input type="number" id="taskduration" name="duration" placeholder="Task Duration"><br/>
+            <a id="task-button" data-animation="ripple">Submit</a>
+        </form><br/>
+        <h2 style="text-align: center; color: #fff;">Next Task</h2>
+        <p style="text-align: center; color: #fff;">{{next_task}}</p>
+    </div>
+    <script src="{{ url_for('static', filename='js/taskscripts.js') }}"></script>
+</body>
+</html>

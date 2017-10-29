@@ -14,16 +14,16 @@ class Mode:
             self.break_time = 15
             self.block_sites = False
             self.warn_sites = False
-            self.break_interval = 60
+            self.break_interval = 40
         elif button == "button2":
             self.max_page_time = 20
-            self.break_time = 5
+            self.break_time = 10
             self.block_sites = False
             self.warn_sites = True
-            self.break_interval = 60
+            self.break_interval = 50
         else:
             self.max_page_time = 10
-            self.break_time = 1
+            self.break_time = 5
             self.block_sites = True
             self.warn_sites = False
             self.break_interval = 60
