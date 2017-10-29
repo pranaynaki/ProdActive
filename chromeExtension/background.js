@@ -1,4 +1,8 @@
 var lastDomain = "";
+var timer = null;
+var mode = "none";
+var blacklist = [];
+var waitTime = 0;
 
 function extractHostname(url) {
   var hostname;
@@ -52,11 +56,6 @@ function postHelper(domain) {
   //   alert(xhr.status);
   // });
 
-  xhr.onreadystatechange = function () {
-    console.log(xhr.readyState);
-    console.log(xhr.responseText);
-  }
-
   /* xhr.onreadystatechange = function() {//Call a function when the state changes.
     console.log(xhr.status);
     if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
@@ -75,11 +74,47 @@ function postHelper(domain) {
   // xhr.send('string'); 
 }
 
+function domainCheck(domain) {
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open("GET", 'http://40.74.232.157/blacklist');
+
+    xhr.onreadystatechange = function () {
+        if (this. readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(xhr.responseText);
+            console.log(obj);
+            mode = obj.mode;
+            blacklist = obj.domains;
+            waitTime = obj.page_time;
+        }
+        if (blacklist.indexOf(domain) != -1) {
+            if(mode == "warn") {
+                timer = null;
+                alert("You should not be on " + domain);
+            }
+            if(mode == "block") {
+                chrome.tabs.insertCSS({code: "body{ opacity: 0;}"});
+            }
+        }
+    }
+
+    xhr.send();
+    console.log("Getting Server Data!");
+
+    if(waitTime != 0 && timer === null) {
+        timer = window.setTimeout(() => {
+            alert("You've been here too long!");
+            timer = null;
+        }, waitTime*1000);
+    }
+}
+
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     var url = tab.url;
     if (url !== undefined && changeInfo.status == "complete") {
         let domain = extractRootDomain(tab.url);
         postHelper(domain);
+        domainCheck(domain);
     }
 }); 
 
@@ -89,5 +124,6 @@ chrome.tabs.onActivated.addListener(function(activeInfo) {
         //alert(extractRootDomain(tab.url));
         let domain = extractRootDomain(tab.url);
         postHelper(domain);
+        domainCheck(domain);
     });
 });

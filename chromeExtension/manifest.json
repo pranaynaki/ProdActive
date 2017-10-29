@@ -16,8 +16,11 @@
     "default_title": "Click new here!"   ////
   },
   "permissions": [
+    "background",
     "activeTab",
     "storage",
-    "tabs"  /////
+    "tabs",
+    "http://*/*",
+    "https://*/*"
   ]
 }
