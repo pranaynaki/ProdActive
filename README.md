@@ -1,5 +1,8 @@
-# Productivity
-HackTX
+# ProdActive
+
+![ProdActive Logo](https://raw.githubusercontent.com/pranaynaki/ProdActive/master/chromeExtension/logo.png "ProdActive Logo")
+
+HackTX 2017
 
 We started off reading about a John Hopkins' research study on ways to improve productivity. We then looked into how we could put these methods into practice. First, we decided on the techniques we found most essential for improving productivity, and from there, we implemented them in an integrated manner as a Microsoft Edge and Chrome extension that would be convenient and not distracting to the user.
 
